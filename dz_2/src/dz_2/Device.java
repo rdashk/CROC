@@ -1,55 +1,24 @@
 package dz_2;
 
+import dz_2.Song;
+import dz_2.SoundProducingDevice;
+
 import java.util.*;
 
 public class Device {
 
-    // list of songs
-    private List<Song> songs;
+    String device_name;
 
-    // list of sound-producing devices
-    private List<SoundProducingDevice> spd;
-
-    /**
-     * Constructor new device
-     */
-    public Device() {
-        this.songs = new ArrayList<Song>();
-        this.spd = new ArrayList<SoundProducingDevice>();
+    public Device(String device_name) {
+        this.device_name = device_name;
     }
 
     /**
-     * @param song - new song's name
-     */
-    public void addSong(Song song) {
-        this.songs.add(song);
-    }
-
-    /**
-     * @param d - new spd 's name
-     */
-    public void addSoundDevice(SoundProducingDevice d) {
-        this.spd.add(d);
-    }
-
-    /**
-     * @param id - spd's index for removing
-     */
-    public void removeSPD(int id){
-
-        // if id not exist in spd list
-        if (id < 0 || id >= spd.size())
-            throw new IndexOutOfBoundsException();
-
-        spd.remove(id);
-    }
-
-    /**
-     * @param song - song's name
+     * @param s - song's name
      * @param d - spd's name
      * @return spd + song's author + song's name
      */
-    public String Play(Song song, SoundProducingDevice d) {
+    protected String Play(List<Song> songs, Song s, List<SoundProducingDevice> spd, SoundProducingDevice d) {
 
         // list of sound-producing devices is empty
         if (spd.isEmpty()) {
@@ -61,16 +30,18 @@ public class Device {
             return "List of songs is empty!";
         }
 
-        // sound-producing device not exist
-        if (!this.spd.contains(d)) {
-            return "Choose other sound-producing device!";
-        }
-
         // song not exist
-        if (!this.songs.contains(song)) {
+        if (!songs.contains(s)) {
             return "Choose other song!";
         }
 
-        return d.getDevice_name() + ":\n  " + song.getAuthor() + " '" + song.getName() + "'";
+        // sound-producing device not exist
+        for (SoundProducingDevice x: spd) {
+            if (Objects.equals(x.getClass(), d.getClass())) {
+                return d.getDevice_name() + ":\n  " + s.getAuthor() + " '" + s.getName() + "'";
+            }
+        }
+
+        return "Choose other sound-producing device!";
     }
 }

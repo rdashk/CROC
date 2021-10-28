@@ -1,6 +1,6 @@
 package dz_2;
 
-public class Song {
+public class Song{
 
     private String author;
     private String name;
@@ -28,4 +28,5 @@ public class Song {
     public String getAuthor() {
         return author;
     }
+
 }

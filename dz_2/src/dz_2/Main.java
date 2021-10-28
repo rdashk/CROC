@@ -1,5 +1,9 @@
 package dz_2;
 
+import dz_2.devices.Record;
+import dz_2.sound_pr_dev.CD;
+import dz_2.sound_pr_dev.VinylTurntable;
+
 import java.util.*;
 
 public class Main {
@@ -23,42 +27,30 @@ public class Main {
             audio.add(new Song(authors[i], songs[i]));
         }
 
-        // array of sound-producing devices
-        String[] carriers = new String[]{
-                "виниловая вертушка",
-                "сд"
-        };
-
-        // list of sound-producing devices
-        List<SoundProducingDevice> spd = new ArrayList<SoundProducingDevice>();
-        for(int i=0;i<carriers.length;i++) {
-            spd.add(new SoundProducingDevice(carriers[i]));
-        }
-
         // new device
-        Device d1 = new Device();
+        Record d1 = new Record();
 
-        // adding sound-producing device
-        d1.addSoundDevice(spd.get(0));
+        //adding sound-producing device
+        d1.addSPD(new VinylTurntable());
 
         // if list of songs are empty
-        System.out.println(d1.Play(audio.get(0), spd.get(0)));
+        System.out.println(d1.play(audio.get(0), new VinylTurntable()));
 
         //deleting sound-producing device
-        d1.removeSPD(0);
+        d1.removeSPD(new VinylTurntable());
 
         // adding songs
         d1.addSong(audio.get(0));
         d1.addSong(audio.get(1));
 
         // if sound-producing device not exist
-        System.out.println(d1.Play(audio.get(0), spd.get(0)));
+        System.out.println(d1.play(audio.get(0), new CD()));
 
         // adding sound-producing devices
-        d1.addSoundDevice(spd.get(0));
-        d1.addSoundDevice(spd.get(1));
+        d1.addSPD(new VinylTurntable());
+        d1.addSPD(new CD());
 
         // if sound-producing device exist
-        System.out.println(d1.Play(audio.get(0), spd.get(0)));
+        System.out.println(d1.play(audio.get(0), new CD()));
     }
 }

@@ -1,6 +1,6 @@
 package dz_2;
 
-public class SoundProducingDevice {
+public class SoundProducingDevice{
 
     private String device_name;
 
@@ -18,5 +18,7 @@ public class SoundProducingDevice {
     public String getDevice_name() {
         return device_name;
     }
+
+
 
 }
