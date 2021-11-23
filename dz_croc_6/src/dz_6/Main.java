@@ -7,6 +7,7 @@ public class Main {
     public static void main(String[] args) throws Exception {
 
         Scanner in = new Scanner(System.in);
+        
         // String path = "КРОК/task_6_2/src/./../../task_6_1/../../../мемы/котики";
         System.out.print("Input your path: ");
         String path = in.nextLine();
