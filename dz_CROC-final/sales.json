@@ -1,0 +1,25 @@
+{
+  "sales":[
+    {
+      "id_sell": 1,
+      "id_seller": 3,
+      "id_good": 1,
+      "amount": 5,
+      "date": "05-06-2021"
+    },
+    {
+      "id_sell": 2,
+      "id_seller": 2,
+      "id_good": 2,
+      "amount": 12,
+      "date": "25-11-2021"
+    },
+    {
+      "id_sell": 3,
+      "id_seller": 2,
+      "id_good": 4,
+      "amount": 500,
+      "date": "05-06-2021"
+    }
+  ]
+}

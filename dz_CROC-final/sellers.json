@@ -1,0 +1,24 @@
+{
+  "sellers": [
+    {
+      "id": 1,
+      "surname": "Petrov",
+      "name": "Petr"
+    },
+    {
+      "id": 2,
+      "surname": "Ivanov",
+      "name": "Ivan"
+    },
+    {
+      "id": 3,
+      "surname": "Konst",
+      "name": "Kostya"
+    },
+    {
+      "id": 4,
+      "surname": "Marievna",
+      "name": "Mary"
+    }
+  ]
+}

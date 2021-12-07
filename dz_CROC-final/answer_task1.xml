@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<task1 lang="en">
+    <el>
+        <name>book</name>
+        <amount>22</amount>
+    </el>
+    <el>
+        <name>pen</name>
+        <amount>150</amount>
+    </el>
+</task1>

@@ -1,0 +1,22 @@
+{
+  "is_has": [
+    {
+      "id_seller": 2,
+      "id_good": 1,
+      "price": 50.0,
+      "amount": 100
+    },
+    {
+      "id_seller": 3,
+      "id_good": 1,
+      "price": 49.8,
+      "amount": 50
+    },
+    {
+      "id_seller": 2,
+      "id_good": 2,
+      "price": 500.0,
+      "amount": 22
+    }
+  ]
+}
